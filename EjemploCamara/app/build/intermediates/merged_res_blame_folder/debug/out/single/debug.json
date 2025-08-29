@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "com.example.duoc.ejemcamara.app-merged_res-31:/layout_activity_main.xml.flat",
+        "source": "com.example.duoc.ejemcamara.app-main-33:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.duoc.ejemcamara.app-merged_res-31:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.example.duoc.ejemcamara.app-main-33:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.duoc.ejemcamara.app-merged_res-31:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.example.duoc.ejemcamara.app-main-33:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.duoc.ejemcamara.app-merged_res-31:/layout_activity_listar_datos.xml.flat",
+        "source": "com.example.duoc.ejemcamara.app-main-33:/layout/activity_listar_datos.xml"
+    },
+    {
+        "merged": "com.example.duoc.ejemcamara.app-merged_res-31:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.example.duoc.ejemcamara.app-main-33:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.duoc.ejemcamara.app-merged_res-31:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.example.duoc.ejemcamara.app-main-33:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.duoc.ejemcamara.app-merged_res-31:/menu_menu_main.xml.flat",
+        "source": "com.example.duoc.ejemcamara.app-main-33:/menu/menu_main.xml"
+    }
+]

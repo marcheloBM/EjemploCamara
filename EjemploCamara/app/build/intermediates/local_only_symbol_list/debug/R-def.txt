@@ -1,0 +1,34 @@
+R_DEF: Internal format may change without notice
+local
+dimen activity_horizontal_margin
+dimen activity_vertical_margin
+id Insertar
+id Nombre
+id Stock
+id Tipo
+id Valor
+id action_settings
+id btnVolver
+id button
+id imageView
+id lblBienvenido
+id lista
+id txtNombre
+id txtStock
+id txtTipo
+id txtValor
+layout activity_listar_datos
+layout activity_main
+menu menu_main
+mipmap ic_launcher
+string action_settings
+string app_name
+string insertar
+string nombre
+string stock
+string textoIncio
+string tipo
+string title_activity_listar_datos
+string valor
+string volver
+style AppTheme
