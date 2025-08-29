@@ -1,25 +1,70 @@
-apply plugin: 'com.android.application'
+plugins {
+    id 'com.android.application'
+    // Si vas a usar Kotlin (lo cual es muy recomendable para desarrollo moderno en Android)
+    // id 'org.jetbrains.kotlin.android'
+}
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion "21.0.1"
+    // Se recomienda usar el espacio de nombres en lugar de applicationId en el defaultConfig para proyectos más nuevos
+    namespace = "com.example.duoc.ejemcamara" // Descomenta y ajusta si es necesario
+
+    compileSdk 34 // O la última versión estable de la API
 
     defaultConfig {
         applicationId "com.example.duoc.ejemcamara"
-        minSdkVersion 19
+        minSdk 21 // Considera si puedes subir esta versión, por ejemplo a 23 o 24
+        targetSdk 34 // O la última versión estable de la API
 
-        targetSdkVersion 22
         versionCode 1
         versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            minifyEnabled false // Considera habilitar esto para producción (true)
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    // Habilita características modernas de Java si es necesario (Java 8+ es común)
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    // Si usas Kotlin:
+    // kotlinOptions {
+    //     jvmTarget = '1.8'
+    // }
+
+    // Habilita View Binding o Data Binding si lo deseas (opcional, pero recomendado)
+    // buildFeatures {
+    //     viewBinding true
+    //     // dataBinding true
+    // }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    // AndroidX Core
+    implementation 'androidx.core:core-ktx:1.12.0' // O la última versión (usa core si no usas Kotlin)
+    implementation 'androidx.appcompat:appcompat:1.6.1' // O la última versión
+
+    // Material Design Components (recomendado para UI moderna)
+    implementation 'com.google.android.material:material:1.11.0' // O la última versión
+
+    // ConstraintLayout (si lo usas para tus layouts)
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4' // O la última versión
+
+    // Aquí irían otras dependencias que tu aplicación necesite.
+    // La dependencia 'fileTree' que tenías generalmente no es necesaria
+    // si las bibliotecas .jar están en 'libs' y usas 'implementation files('libs/tu_libreria.jar')'
+    // o, mejor aún, si las dependencias están disponibles en Maven Central o Google Maven.
+    // implementation fileTree(dir: 'libs', include: ['*.jar']) // Si realmente tienes JARs locales no disponibles en repositorios
+
+    // Dependencias de Test
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 }
