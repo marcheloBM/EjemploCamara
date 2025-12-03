@@ -63,6 +63,8 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         // Recuperamos el ImageView
         imageView = (ImageView) findViewById(R.id.imageView);
+        // Verificar actualización al iniciar
+        UpdateChecker.checkForUpdate(this);
     }
 
     @Override
